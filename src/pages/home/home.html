@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Albums List
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list *ngIf="albumsRes">
+
+    <button (click)="onLoadPhotos()" *ngFor="let album of albumsRes" ion-item>
+      <ion-icon name="cart" item-start></ion-icon>
+      {{ album.title }}
+    </button>
+
+  </ion-list>
+
+
+</ion-content>
